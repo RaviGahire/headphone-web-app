@@ -1,0 +1,68 @@
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+*,
+*:before,
+*:after{
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+:active,
+:hover,
+:focus{
+    outline: none !important;
+    outline-offset: 0;
+}
+a,
+a:hover{
+    text-decoration: none;
+    
+}
+a:hover{
+    color: red !important;
+   
+}
+
+ul,
+ol{
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Variable */
+:root{
+    --primary-pink:#f783ac;
+    --text-white:#fff;
+    --text-black:#0000;
+    --text-gray:#adb5bd;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+}
+
+/* Custom Scroll Bar */
+::-webkit-scrollbar{
+    width: 0.625rem;
+}
+::-webkit-scrollbar-track{
+    background: var(--text-white);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--primary-pink);
+}
+
+/* Custom Css */
+h1{
+    font-size: 6.25rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: var(--primary-pink);
+}
