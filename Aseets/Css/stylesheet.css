@@ -180,3 +180,32 @@ padding-bottom: 6.25rem;
     width: 60%;
     margin: auto;
 }
+
+/* Header Design */
+
+.navigation-wrap{
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.navigation-wrap .nav-item{
+  padding: 0 0.5rem;
+  transition: all 200ms linear;
+}
+
+.navbar-toggler:focus{
+  outline: none;
+  border: unset;
+  box-shadow: none;
+}
+
+.nav-link{
+  padding: 0.9375rem;
+  font-size: 1.25rem !important; 
+  font-weight: 500 !important;
+  text-transform: capitalize;
+  color: var(--text-white) !important;
+  letter-spacing: 0.0625rem;
+}
