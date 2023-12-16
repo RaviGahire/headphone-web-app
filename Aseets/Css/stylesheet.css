@@ -18,7 +18,7 @@ a:hover {
   text-decoration: none;
 }
 a:hover {
-  color: red !important;
+  color: var(--primary-pink) !important;
 }
 
 ul,
@@ -206,6 +206,52 @@ padding-bottom: 6.25rem;
   font-size: 1.25rem !important; 
   font-weight: 500 !important;
   text-transform: capitalize;
-  color: var(--text-white) !important;
+  color: var(--text-white);
   letter-spacing: 0.0625rem;
+}
+.nav-link:hover,
+.nav-link.active{
+  color:var(--primary-pink)
+}
+
+.navigation-wrap .main-btn{
+  color: var(--text-white);
+  margin: auto;
+}
+.navigation-wrap .main-btn::before, 
+.navigation-wrap .main-btn::after{
+background: transparent;
+}
+
+
+/* change navbr styling on scroll*/
+.navigation-wrap.scroll-on{
+  position: fixed;
+  background-color: var(--text-black);
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0.125rem 1.75rem 0 rgba(0,0,0,0.09);
+transition: all .5s ease-in-out
+0s;
+
+}
+
+.navigation-wrap.scroll-on .nav-link:hover,
+.navigation-wrap.scroll-on .nav-link.active{
+  color: var(--primary-pink);
+}
+
+.navigation-wrap.scroll-on .main-btn{
+  color: var(--text-white);
+  margin: auto;
+}
+
+.navigation-wrap.scroll-on .main-btn:hover{
+  background-color: transparent;
+}
+
+.navigation-wrap.scroll-on .main-btn::before,
+.navigation-wrap.scroll-on .main-btn::after{
+  background-color: var(--text-black);
 }
