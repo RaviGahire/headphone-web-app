@@ -1,24 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 *,
-*:before,
-*:after {
+*:after,
+*:before {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 :active,
 :hover,
 :focus {
-  outline: none !important;
+  outline: 0 !important;
   outline-offset: 0;
 }
+
 a,
 a:hover {
   text-decoration: none;
 }
+
 a:hover {
-  color: var(--primary-pink) !important;
+  color: var(--primary-color) !important;
 }
 
 ul,
@@ -27,231 +31,252 @@ ol {
   padding: 0;
 }
 
-/* Variable */
+/*===== Variable Define =====*/
 :root {
-  --primary-pink: #f783ac;
-  --text-white: #fff;
-  --text-black: #0000;
-  --text-gray: #adb5bd;
+  --primary-color: #fd8eaf;
+  --white-color: #fff;
+  --text-color: #9e9999;
+  --black-color: #000;
 }
 
 html {
   scroll-behavior: smooth;
 }
+
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 100%;
   font-weight: 400;
 }
 
-/* Custom Scroll Bar */
+/*
+=========================================
+    Custom Scrollbar
+=========================================
+*/
+
 ::-webkit-scrollbar {
   width: 0.625rem;
 }
+
 ::-webkit-scrollbar-track {
-  background: var(--text-white);
+  background: var(--white-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-pink);
+  background: var(--primary-color);
 }
 
-/* Custom Css */
+/*
+==========================================
+   Custom CSS Design
+==========================================
+*/
+
 h1 {
   font-size: 6.25rem;
   font-weight: 900;
   margin-bottom: 1rem;
-  color: var(--primary-pink);
+  color: var(--primary-color);
 }
+
 h1 span {
-  color: var(--text-white);
+  color: var(--white-color);
 }
+
 h2 {
   font-weight: 700;
   position: relative;
-  font-size: 2.1825rem;
+  font-size: 2.1875rem;
   text-transform: capitalize;
-  color: var(--text-black);
+  color: var(--black-color);
   line-height: 3.7rem;
 }
 
 h2:before {
-  content: " ";
+  background: #ef6d9f;
+  border-radius: 0.3125rem;
+  content: '';
   position: absolute;
   top: -1.5625rem;
   left: 0;
   width: 1.875rem;
-  height: 0.3125;
-  background: var(--primary-pink);
-  border-radius: 0.3125rem;
+  height: 0.3125rem;
 }
+
 h4 {
-  color: var(--text-black);
+  color: var(--black-color);
   text-transform: capitalize;
   font-size: 1.25rem;
   font-weight: 900;
   margin-bottom: 0.9375rem;
-  transition: all 0.3s linear;
+  transition: all .3s linear;
 }
+
 h5 {
-  color: var(--text-black);
+  color: var(--black-color);
   text-transform: capitalize;
+  font-family: var(--primary-color);
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
-p{
-    font-size: 1.125rem;
-    color: var(--text-black);
-    font-weight: 400;
-    line-height: 1.75rem;
-    letter-spacing: 0.0625rem;
+p {
+  font-size: 1.125rem;
+  color: var(--text-color);
+  font-weight: 400;
+  line-height: 1.75rem;
+  letter-spacing: 0.0625rem;
 }
-
-/* custom buttons */
 .main-btn{
-    width: 9.375rem;
-    height: 3.125rem;
-    border: 0.063rem solid var(--primary-pink);
-      font-size: 1.125rem;
-    cursor: pointer;
-    -webkit-tap-highlight-color:transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    z-index: 0;
-    transition: 0.3s;
-
+  width: 9.375rem;
+  height: 3.125rem;
+  border: 0.063rem solid var(--primary-color); 
+  color:var(--black-color);
+  font-size: 1.125rem;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+  transition: 0.3s;
+}
+.main-btn::before, .main-btn::after {
+  position: absolute;
+  background: var(--white-color);
+  z-index: -1;
+  transition: 0.3s;
+  content: '';
+}
+.main-btn::before {
+  height: 3.125rem;
+  width: 8.125rem;
 }
 
-.main-btn::before,
-.main-btn::after{
-    position: absolute;
-    background: var(--text-white);
-    z-index: -1;
-    transition: 0.3s;
-    content: ' ';
-    
+.main-btn::after {
+  width: 9.375rem;
+  height: 1.875rem;
+}
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
-
-.main-btn::before{
-    height: 3.125rem;
-    width: 8.125rem;
-    
-}
-.main-btn::after{
-    width: 9.375rem;
-    height: 1.875rem;
-    
+.main-btn:hover::before {
+  width: 0px;
+  background: var(--white-color);
 }
 
-.noselect{
-    -webkit-touch-callout:none;
-    -webkit-user-select:none;
-    -khtml-user-select:none;
-    -moz-user-select:none;
-    -ms-user-select:none;
-    user-select: none;
+.main-btn:hover::after {
+  height: 0px;
+  background: var(--white-color);
 }
 
-.main-btn:hover::before{
-    width: 0px;
-    background: var(--text-white);
-    
-}
-.main-btn:hover::after{
-    height: 0px;
-    background: var(--text-white);
-}
-.main-btn:hover{
-    background: var(--text-white);
-    color: var(--primary-pink);
-    
+.main-btn:hover {
+  background: var(--white-color);
+  color:var(--primary-color);
+}  
+.wrapper {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
 }
 
-.wrapper{
-    padding-top: 6.25rem;
-padding-bottom: 6.25rem;
+.text-content {
+  width: 60%;
+  margin: auto;
 }
-.text-content{
-    width: 60%;
-    margin: auto;
-}
-
-/* Header Design */
-
+ 
+/*
+==========================================
+   Header Design
+==========================================
+*/
 .navigation-wrap{
-  position: fixed;
-  width: 100%;
-  z-index: 10000;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
+  position:fixed;
+  width:100%;
+  left:0;
+  z-index:1000;
+  -webkit-transition:all 0.3s ease-out;
+  transition:all 0.3s ease-out;
+} 
 .navigation-wrap .nav-item{
-  padding: 0 0.5rem;
-  transition: all 200ms linear;
+  padding:0 0.5rem;
+  transition:all 200ms linear;
 }
-
 .navbar-toggler:focus{
-  outline: none;
-  border: unset;
+  outline:none;
+  border:unset;
   box-shadow: none;
 }
-
 .nav-link{
-  padding: 0.9375rem;
-  font-size: 1.25rem !important; 
-  font-weight: 500 !important;
+  padding-top:0.9375rem;
+  font-size: 0.9375rem;
+  font-weight: 400;
   text-transform: capitalize;
-  color: var(--text-white);
-  letter-spacing: 0.0625rem;
+  color:var(--white-color);
+  letter-spacing:0.0625rem;
 }
 .nav-link:hover,
 .nav-link.active{
-  color:var(--primary-pink)
+  color:var(--primary-color);
 }
-
 .navigation-wrap .main-btn{
-  color: var(--text-white);
-  margin: auto;
+  color:var(--white-color);
+  margin:auto;
 }
-.navigation-wrap .main-btn::before, 
+.navigation-wrap .main-btn:hover{
+  background-color:transparent;
+}
+.navigation-wrap .main-btn::before,
 .navigation-wrap .main-btn::after{
-background: transparent;
+  background-color:transparent;
 }
 
-
-/* change navbr styling on scroll*/
+/* Change navbar styling on scroll */
 .navigation-wrap.scroll-on{
-  position: fixed;
-  background-color: var(--text-black);
-  top: 0;
-  left: 0;
-  width: 100%;
+  position:fixed;
+  background-color:var(--black-color);
+  top:0;
+  left:0;
+  width:100%;
   box-shadow: 0 0.125rem 1.75rem 0 rgba(0,0,0,0.09);
-transition: all .5s ease-in-out
-0s;
-
+  transition:all .15s ease-in-out 0s;
 }
-
 .navigation-wrap.scroll-on .nav-link:hover,
 .navigation-wrap.scroll-on .nav-link.active{
-  color: var(--primary-pink);
+  color:var(--primary-color);
 }
-
 .navigation-wrap.scroll-on .main-btn{
-  color: var(--text-white);
-  margin: auto;
+  color:var(--white-color);
+  margin:auto;
 }
-
 .navigation-wrap.scroll-on .main-btn:hover{
-  background-color: transparent;
+  background-color:transparent;
 }
-
 .navigation-wrap.scroll-on .main-btn::before,
 .navigation-wrap.scroll-on .main-btn::after{
-  background-color: var(--text-black);
+  background-color:var(--black-color);
+}
+ 
+/*
+==========================================
+   Top Banner Design
+==========================================
+*/
+.hero_slider .carousel-caption{
+text-align: left;
+top: 50%;
+left: 50%;
+bottom: 0;
+right: 0;
+transform: translate(-75% , -35%);
+max-width: 1320px;
+
 }
