@@ -149,7 +149,7 @@ p {
   background: var(--white-color);
   z-index: -1;
   transition: 0.3s;
-  content: '';
+  content: ' ';
 }
 .main-btn::before {
   height: 3.125rem;
@@ -160,14 +160,7 @@ p {
   width: 9.375rem;
   height: 1.875rem;
 }
-.noselect {
-  -webkit-touch-callout: none;
-    -webkit-user-select: none;
-     -khtml-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
-}
+
 
 .main-btn:hover::before {
   width: 0px;
@@ -193,6 +186,18 @@ p {
   margin: auto;
 }
  
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+
+
+
 /*
 ==========================================
    Header Design
